@@ -1,0 +1,101 @@
+@media (min-width: 300px) {
+    .pageGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 75px 75px 200px 200px 75px;
+        grid-gap: 10px;
+        grid-template-areas:
+        "header"
+        "nav"
+        "side"
+        "art1"
+        "art2"
+        "footer"
+    }
+}
+
+@media (min-width: 500px) {
+    .pageGrid{
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: 100px 75px 200px 200px 75px;
+        grid-gap: 10px;
+        grid-template-areas:
+        "header header"
+        "nav nav"
+        "side art1"
+        "side art2"
+        "footer footer"
+    }
+}
+
+@media (min-width: 700px) {
+    .pageGrid{
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr;
+        grid-template-rows: 100px 75px 400px 75px;
+        grid-gap: 10px;
+
+        /*
+        grid-template-column: repeat(3, 1fr)
+        grid-template: 1fr 1fr 1fr / 200px 200px 200px;
+                        ^               ^
+                grid-template-rows / grid-template-columns values--
+        grid-auto-rows: 200px;
+        */
+
+        grid-template-areas: 
+            "header header header"
+            "side      nav    nav"
+            "side     art1    art2"
+            "side    footer  footer"
+    }
+}
+
+p {
+    margin: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#header{
+    background-color: rgb(230, 146, 146);
+    /* grid-column: 1 / 4;
+    grid-row: 1; */
+    /* grid-area: header; */
+}
+
+#navigation{
+    background-color: rgb(231, 136, 240);
+    /* grid-column: 2 / span 2;
+    grid-row: 2; */
+    /* grid-area: nav; */
+}
+
+#articleOne{
+    background-color: rgb(178, 146, 252);
+    /* grid-column: 2;
+    grid-row: 3; */
+    /* grid-area: art1; */
+}
+
+#articleTwo{
+    background-color: lightsalmon;
+    /* grid-column: 3;
+    grid-row: 3; */
+    /* grid-area: art2; */
+}
+
+#sidebar{
+    background-color: rgb(224, 173, 96);
+    /* grid-column: 1;
+    grid-row: 2 / 5; */
+    /* grid-area: side; */
+}
+
+#footer{
+    background-color: rgb(141, 219, 155);
+    /* grid-column: 2 / span 2;
+    grid-row: 4; */
+    /* grid-area: footer; */
+}
