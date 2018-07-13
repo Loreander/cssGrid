@@ -1,8 +1,8 @@
-@media (min-width: 300px) {
+/* @media (min-width: 300px) {
     .pageGrid{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 75px 75px 75px 200px 200px 75px;
+        grid-template-rows: 75px 75px 50px 200px 200px 75px;
         grid-gap: 10px;
         grid-template-areas:
         "header"
@@ -27,7 +27,7 @@
         "side art2"
         "footer footer"
     }
-}
+} */
 
 @media (min-width: 700px) {
     .pageGrid{
@@ -36,14 +36,13 @@
         grid-template-rows: 100px 75px 400px 75px;
         grid-gap: 10px;
 
-        /*
+        /* ### Here are some other formats / notations ###
         grid-template-column: repeat(3, 1fr)
         grid-template: 1fr 1fr 1fr / 200px 200px 200px;
                         ^               ^
                 grid-template-rows / grid-template-columns values--
         grid-auto-rows: 200px;
         */
-
         grid-template-areas: 
             "header header header"
             "side      nav    nav"
